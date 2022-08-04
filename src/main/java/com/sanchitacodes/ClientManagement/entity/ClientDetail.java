@@ -11,15 +11,14 @@ import javax.persistence.Id;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class ClientDetail {
+    public class ClientDetail {
 
     @Id
-    Integer id;
-    String client;
-    String status;
-    String billingInterval;
-    String email;
-    String feesType;
-    float fees;
-
+    private Integer id;
+    private String client;
+    private String status;
+    private String billing_interval;
+    private String email;
+    private String fees_type;
+    private float fees;
 }
