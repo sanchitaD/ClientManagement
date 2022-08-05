@@ -21,7 +21,7 @@ class ClientManagementApplicationTests {
 
 	@Test
 	void testFetchClientDetailByClientName(){
-		List<ClientDetail> clientDetail =
+		ClientDetail clientDetail =
 				clientManagementServiceImpl.fetchClientDetailByClientName("Pizza House");
 		assertNotNull(clientDetail);
 	}
