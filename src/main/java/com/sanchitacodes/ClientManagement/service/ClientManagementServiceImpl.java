@@ -26,7 +26,7 @@ public class ClientManagementServiceImpl implements ClientManagementService{
     @Override
     public List<ClientDetail> fetchClientDetail() {
         log.info("Inside fetchClientDetail of ClientManagementServiceImpl, fetching records!");
-        return (List<ClientDetail>) clientManagementRepository.findAll();
+        return clientManagementRepository.findAll();
     }
 
     public ClientDetail fetchClientDetailByClientName(String clientName) {
@@ -43,8 +43,7 @@ public class ClientManagementServiceImpl implements ClientManagementService{
     @Override
     public ClientDetail updateClientDetail(ClientDetail clientDetail, Integer id) {
         log.info("Inside updateClientDetail of ClientManagementServiceImpl, updating records!");
-        //TODO
-        return null;
+        return clientManagementRepository.save(clientDetail);
     }
 
     @Override
