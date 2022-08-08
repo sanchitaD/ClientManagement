@@ -32,12 +32,12 @@ public class ClientManagementServiceImpl implements ClientManagementService{
     public ClientDetail fetchClientDetailByClientName(String clientName) {
         log.info("Inside fetchClientDetailByClientName of ClientManagementServiceImpl, fetching records!");
         final String ACTIVE = "active";
-        Optional<ClientDetail> clientDetail = clientManagementRepository
-                .findAll()
-                .stream()
-                .filter(record-> record.getClient().equals(clientName) && record.getStatus().equals(ACTIVE))
-                .findFirst();
-        return clientDetail.isPresent() ? clientDetail.get() : null; // TODO: Instead of null you can also return empty clientDetail Object
+        List<ClientDetail> clientDetail = clientManagementRepository.findAll();
+//        return Optional.of(clientDetail)
+//                .stream()
+//                .filter(record-> record.getClient().equals(clientName) && record.getStatus().equals(ACTIVE))
+//                .forEach();
+        return new ClientDetail();
     }
 
     @Override

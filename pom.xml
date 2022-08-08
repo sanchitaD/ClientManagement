@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.sanchitacodes</groupId>
 	<artifactId>ClientManagement</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>ClientManagement</name>
 	<description>Client Management for Demo</description>
 	<packaging>jar</packaging>
